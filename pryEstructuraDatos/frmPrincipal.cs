@@ -19,7 +19,9 @@ namespace pryEstructuraDatos
 
         private void lineaDobleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmListaSimple newobj = new frmListaSimple();
+            newobj.ShowDialog();
+            this.Hide();
         }
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,7 +33,9 @@ namespace pryEstructuraDatos
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmPila newobj = new frmPila();
+            newobj.ShowDialog();
+            this.Hide();
         }
     }
 }

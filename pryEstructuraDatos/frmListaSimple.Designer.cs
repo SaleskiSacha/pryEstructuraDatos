@@ -1,6 +1,6 @@
 ﻿namespace pryEstructuraDatos
 {
-    partial class frmPila
+    partial class frmListaSimple
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPila));
-            this.dgvPila = new System.Windows.Forms.DataGridView();
+            this.dgvLS = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,25 +49,23 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.lstPila = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
+            this.lstLS = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLS)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvPila
+            // dgvLS
             // 
-            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvPila.Location = new System.Drawing.Point(275, 241);
-            this.dgvPila.Name = "dgvPila";
-            this.dgvPila.Size = new System.Drawing.Size(421, 199);
-            this.dgvPila.TabIndex = 9;
+            this.dgvLS.Location = new System.Drawing.Point(263, 250);
+            this.dgvLS.Name = "dgvLS";
+            this.dgvLS.Size = new System.Drawing.Size(421, 199);
+            this.dgvLS.TabIndex = 12;
             // 
             // Column1
             // 
@@ -94,10 +91,10 @@
             this.mrcElementoEliminado.Controls.Add(this.label2);
             this.mrcElementoEliminado.Controls.Add(this.label5);
             this.mrcElementoEliminado.Controls.Add(this.label6);
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(495, 12);
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(483, 21);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
             this.mrcElementoEliminado.Size = new System.Drawing.Size(201, 223);
-            this.mrcElementoEliminado.TabIndex = 8;
+            this.mrcElementoEliminado.TabIndex = 11;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
             // 
@@ -109,7 +106,6 @@
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblTramite
             // 
@@ -171,10 +167,10 @@
             this.mrcNuevo.Controls.Add(this.txtNombre);
             this.mrcNuevo.Controls.Add(this.txtCodigo);
             this.mrcNuevo.Controls.Add(this.btnAgregar);
-            this.mrcNuevo.Location = new System.Drawing.Point(275, 12);
+            this.mrcNuevo.Location = new System.Drawing.Point(263, 21);
             this.mrcNuevo.Name = "mrcNuevo";
             this.mrcNuevo.Size = new System.Drawing.Size(203, 223);
-            this.mrcNuevo.TabIndex = 7;
+            this.mrcNuevo.TabIndex = 10;
             this.mrcNuevo.TabStop = false;
             this.mrcNuevo.Text = "Nuevo Elemento";
             // 
@@ -234,53 +230,41 @@
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 246);
+            this.label7.Location = new System.Drawing.Point(23, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 13);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 14;
             this.label7.Text = "Listado en una lista y una grilla";
             // 
-            // lstPila
+            // lstLS
             // 
-            this.lstPila.FormattingEnabled = true;
-            this.lstPila.Location = new System.Drawing.Point(12, 267);
-            this.lstPila.Name = "lstPila";
-            this.lstPila.Size = new System.Drawing.Size(216, 173);
-            this.lstPila.TabIndex = 11;
+            this.lstLS.FormattingEnabled = true;
+            this.lstLS.Location = new System.Drawing.Point(26, 276);
+            this.lstLS.Name = "lstLS";
+            this.lstLS.Size = new System.Drawing.Size(216, 173);
+            this.lstLS.TabIndex = 13;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 231);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // frmPila
+            // frmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(712, 470);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lstPila);
-            this.Controls.Add(this.dgvPila);
+            this.Controls.Add(this.lstLS);
+            this.Controls.Add(this.dgvLS);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevo);
-            this.Name = "frmPila";
-            this.Text = "frmPila";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
+            this.Name = "frmListaSimple";
+            this.Text = "Lista Doble";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLS)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevo.ResumeLayout(false);
             this.mrcNuevo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +272,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.DataGridView dgvLS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -309,7 +293,6 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox lstPila;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox lstLS;
     }
 }
