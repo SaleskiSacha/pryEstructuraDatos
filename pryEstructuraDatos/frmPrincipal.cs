@@ -28,5 +28,10 @@ namespace pryEstructuraDatos
             newobj.ShowDialog();
             this.Hide();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
