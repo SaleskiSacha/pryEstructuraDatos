@@ -43,7 +43,7 @@ namespace pryEstructuraDatos
             InOrdenAsc(grilla, Raiz);
 
         }
-        private void InOrdenAsc(DataGridView grilla, clsNodo R)
+        public void InOrdenAsc(DataGridView grilla, clsNodo R)
         {
             if (R.Izquierdo != null) InOrdenAsc(grilla, R.Izquierdo);
             grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
@@ -54,11 +54,40 @@ namespace pryEstructuraDatos
             Lista.Items.Clear();
             InOrdenAsc(Lista, Raiz);
         }
-        private void InOrdenAsc(ComboBox lst, clsNodo R) 
+        public void InOrdenAsc(ComboBox lst, clsNodo R)
         {
             if (R.Izquierdo != null) InOrdenAsc(lst, R.Izquierdo);
             lst.Items.Add(R.Codigo);
             if (R.Derecho != null) InOrdenAsc(lst, R.Derecho);
+        }
+        private void InOrdendes(DataGridView grilla, clsNodo R)
+        {
+
+            if (R.Derecho != null) InOrdenAsc(grilla, R.Derecho);
+            grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null) InOrdenAsc(grilla, R.Izquierdo);
+        }
+        private void InOrdendes(ComboBox lst, clsNodo R)
+        {
+            if (R.Derecho != null) InOrdendes(lst, R.Derecho);
+            lst.Items.Add(R.Codigo);
+            if (R.Izquierdo != null) InOrdendes(lst, R.Izquierdo);
+
+        }
+        public void Recorrer(TreeView tree)
+        {
+            tree.Nodes.Clear();
+            TreeNode NodoPadre = new TreeNode("Árbol");
+            tree.Nodes.Add(NodoPadre);
+            PreOrden(Raiz, NodoPadre);
+            tree.ExpandAll();
+        }
+        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
+        {
+            TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+            nodoTreeView.Nodes.Add(NodoPadre);
+            if (R.Izquierdo != null) PreOrden(R.Izquierdo, NodoPadre);
+            if (R.Derecho != null) PreOrden(R.Derecho, NodoPadre);
         }
     }
 }

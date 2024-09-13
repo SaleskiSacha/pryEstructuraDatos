@@ -25,9 +25,9 @@ namespace pryEstructuraDatos
             nuevo.Nombre = txtNombre.Text;
             nuevo.Tramite = txtTramite.Text;
             clsListaDoble.Agregar(nuevo);
-            clsListaDoble.Recorrer(dgv1);
-            clsListaDoble.Recorrer(lst1);
-            clsListaDoble.Recorrer();
+            //clsListaDoble.Recorrer(dgv1);
+            //clsListaDoble.Recorrer(lst1);
+            //clsListaDoble.Recorrer();
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";

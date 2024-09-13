@@ -49,6 +49,7 @@
             this.optInOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optPostOrden = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             // dgv1
             // 
+            this.dgv1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -214,16 +216,17 @@
             this.optInOrden.AutoSize = true;
             this.optInOrden.Location = new System.Drawing.Point(62, 260);
             this.optInOrden.Name = "optInOrden";
-            this.optInOrden.Size = new System.Drawing.Size(66, 17);
+            this.optInOrden.Size = new System.Drawing.Size(126, 17);
             this.optInOrden.TabIndex = 17;
             this.optInOrden.TabStop = true;
-            this.optInOrden.Text = "In-Orden";
+            this.optInOrden.Text = "In-Orden Ascendente";
             this.optInOrden.UseVisualStyleBackColor = true;
+            this.optInOrden.CheckedChanged += new System.EventHandler(this.optInOrden_CheckedChanged);
             // 
             // optPreOrden
             // 
             this.optPreOrden.AutoSize = true;
-            this.optPreOrden.Location = new System.Drawing.Point(62, 314);
+            this.optPreOrden.Location = new System.Drawing.Point(62, 328);
             this.optPreOrden.Name = "optPreOrden";
             this.optPreOrden.Size = new System.Drawing.Size(73, 17);
             this.optPreOrden.TabIndex = 18;
@@ -234,7 +237,7 @@
             // optPostOrden
             // 
             this.optPostOrden.AutoSize = true;
-            this.optPostOrden.Location = new System.Drawing.Point(62, 369);
+            this.optPostOrden.Location = new System.Drawing.Point(62, 362);
             this.optPostOrden.Name = "optPostOrden";
             this.optPostOrden.Size = new System.Drawing.Size(78, 17);
             this.optPostOrden.TabIndex = 19;
@@ -242,11 +245,24 @@
             this.optPostOrden.Text = "Post-Orden";
             this.optPostOrden.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(62, 293);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(133, 17);
+            this.radioButton1.TabIndex = 20;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "In-Orden Descendente";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 450);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.optPostOrden);
             this.Controls.Add(this.optPreOrden);
             this.Controls.Add(this.optInOrden);
@@ -257,6 +273,7 @@
             this.Controls.Add(this.mrcNuevo);
             this.Name = "frmArbolBinario";
             this.Text = "frmArbolBinario";
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
             this.mrcElementoEliminado.PerformLayout();
@@ -290,5 +307,6 @@
         private System.Windows.Forms.RadioButton optInOrden;
         private System.Windows.Forms.RadioButton optPreOrden;
         private System.Windows.Forms.RadioButton optPostOrden;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

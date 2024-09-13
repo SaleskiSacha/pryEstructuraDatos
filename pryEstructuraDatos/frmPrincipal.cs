@@ -37,5 +37,17 @@ namespace pryEstructuraDatos
             newobj.ShowDialog();
             this.Hide();
         }
+
+        private void estructurasLinealesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario newobj = new frmArbolBinario();
+            newobj.ShowDialog();
+            this.Hide();
+        }
     }
 }
