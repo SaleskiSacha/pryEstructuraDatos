@@ -203,6 +203,7 @@
             this.btnEquilibrar.TabIndex = 14;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // trvVer
             // 

@@ -89,5 +89,54 @@ namespace pryEstructuraDatos
             if (R.Izquierdo != null) PreOrden(R.Izquierdo, NodoPadre);
             if (R.Derecho != null) PreOrden(R.Derecho, NodoPadre);
         }
+        private clsNodo[] Vector = new clsNodo[100];
+        private Int32 i = 0;
+        private void Eliminar(Int32 Codigo) 
+        {
+            i = 0;//inicializo el vector para mover los datos
+            GrabarVectorInOrden(Raiz, Codigo);//grabamos in orden
+            Raiz = null; //al declararle nulo borra la raiz y el arbol queda nullo
+            EquilibrarArbol(0, i - 1);//esto crea el arbol nuevamente
+        }
+        private void GrabarVectorInOrden(clsNodo NodoRecibido, Int32 Codigo)
+        {
+            if (NodoRecibido.Izquierdo != null)
+                GrabarVectorInOrden(NodoRecibido.Izquierdo);
+            if (NodoRecibido.Codigo != Codigo)
+            {
+                Vector[i] = NodoRecibido;
+                i++;
+            }
+            if (NodoRecibido.Derecho != null)
+                GrabarVectorInOrden(NodoRecibido.Derecho);
+        }
+        public void Equilibrar() 
+        {
+            i = 0;//inicializo el vector para mover los datos
+            GrabarVectorInOrden(Raiz);//grabamos in orden
+            Raiz = null; //al declararle nulo borra la raiz y el arbol queda nullo
+            EquilibrarArbol(0, i - 1);//esto crea el arbol nuevamente
+
+        }
+        private void EquilibrarArbol(Int32 ini, Int32 fin) 
+        {
+            Int32 m = (ini / fin) / 2;
+            if (ini <= fin)
+            {
+                Agregar(Vector[m]);
+                EquilibrarArbol(ini, m-1);
+                EquilibrarArbol(m + 1, fin);
+            }
+        }
+        private void GrabarVectorInOrden(clsNodo NodoRecibido) 
+        {
+            if (NodoRecibido.Izquierdo != null)
+                GrabarVectorInOrden(NodoRecibido.Izquierdo);
+            Vector[i] = NodoRecibido;
+            i++;
+            if (NodoRecibido.Derecho != null)
+                GrabarVectorInOrden(NodoRecibido.Derecho);
+        }
+        
     }
 }

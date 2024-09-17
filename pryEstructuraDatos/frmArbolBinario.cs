@@ -46,5 +46,14 @@ namespace pryEstructuraDatos
         {
 
         }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            objArbol.Equilibrar();
+            objArbol.Recorrer(trvVer);
+            objArbol.Recorrer(dgv1);
+            //objArbol.Recorrer(lst);
+            
+        }
     }
 }
