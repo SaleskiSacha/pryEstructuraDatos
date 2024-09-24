@@ -17,144 +17,110 @@ namespace pryEstructuraDatos
         {
             InitializeComponent();
         }
-        clsArbolBinario ArbolBinario = new clsArbolBinario();
-        public bool asc;
-        public string recorrer;
+        clsArbolBinario Arbol = new clsArbolBinario();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (ArbolBinario.Busqueda(Convert.ToInt32(txtCodigo.Text)) == false)
-            {
-                clsNodo objNodo = new clsNodo();
-                objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-                objNodo.Nombre = txtNombre.Text;
-                objNodo.Tramite = txtTramite.Text;
-                StreamWriter Sw = new StreamWriter("./ArbolBinario.csv", false);
+            clsNodo Nuevo = new clsNodo();
+            Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            Nuevo.Nombre = txtNombre.Text;
+            Nuevo.Tramite = txtTramite.Text;
 
-                ArbolBinario.Agregar(objNodo);
+            Arbol.Agregar(Nuevo);
+            Arbol.Recorrer(trvVer);
+            Arbol.RecorrerAsc(dgv1);
+            Arbol.RecorrerAsc(cmb1);
+            optInOrden.Checked = true;
 
-                if (optInOrden.Checked)
-                {
-                    if (optInOrden.Checked)
-                    {
-                        ArbolBinario.Recorrer(dgv1);
-                        //ArbolBinario.Recorrer(lst1);
-                        ArbolBinario.Recorrer(cmb1);
-                        ArbolBinario.Recorrer(trvVer);
-                        ArbolBinario.RecorrerSW(Sw);
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
 
-
-                    }
-                    else
-                    {
-                        ArbolBinario.RecorrerDes(dgv1);
-                        ArbolBinario.RecorrerDes(cmb1);
-                        //ArbolBinario.RecorrerDes(lstB);
-                        ArbolBinario.RecorrerDes(trvVer);
-                        ArbolBinario.RecorrerDesSW(Sw);
-
-                    }
-                }
-                if (optPreOrden.Checked)
-                {
-                    ArbolBinario.RecorrerPreOrden(dgv1);
-                    ArbolBinario.RecorrerPreOrden(cmb1);
-                    //ArbolBinario.RecorrerPreOrden(lstB);
-                    ArbolBinario.RecorrerPreOrden(trvVer);
-                    ArbolBinario.RecorrerPreOrdenSW(Sw);
-                }
-                if (optPostOrden.Checked)
-                {
-                    ArbolBinario.RecorrerPostOrden(dgv1);
-                    ArbolBinario.RecorrerPostOrden(cmb1);
-                    //ArbolBinario.RecorrerPostOrden(lstB);
-                    ArbolBinario.RecorrerPostOrden(trvVer);
-                    ArbolBinario.RecorrerPostOrdenSW(Sw);
-                }
-                txtCodigo.Text = "";
-                txtNombre.Text = "";
-                txtTramite.Text = "";
-                Sw.Close();
-                Sw.Dispose();
-
-            }
-            else
-            {
-                MessageBox.Show("El codigo se repite, no se pudo cargar");
-            }
-
+            btnEquilibrar.Enabled = true;
+            txtCodigo.Select();
         }
 
-        private void frmArbolBinario_Load(object sender, EventArgs e)
+        private void optPreOrden_CheckedChanged(object sender, EventArgs e)
         {
-            optInOrden.Checked = true;
-            optInOrdenDes.Checked = true;
-            btnAgregar.Enabled = false;
-            btnEliminar.Enabled = false;
+            Arbol.Recorrer(trvVer);
+        }
+
+        private void optInOrdenDes_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerDes(dgv1);
+            Arbol.RecorrerDes(cmb1);
         }
 
         private void optInOrden_CheckedChanged(object sender, EventArgs e)
         {
-            
+            Arbol.RecorrerAsc(dgv1);
+            Arbol.RecorrerAsc(cmb1);
+        }
+        private void Validaciones()
+        {
+            if (!string.IsNullOrWhiteSpace(txtCodigo.Text) &&
+                !string.IsNullOrWhiteSpace(txtNombre.Text) &&
+                !string.IsNullOrWhiteSpace(txtTramite.Text))
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
+            Validaciones();
+        }
 
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Validaciones();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            Validaciones();
+        }
+
+        private void frmArbolBinario_Load(object sender, EventArgs e)
+        {
+            Validaciones();
+            btnEquilibrar.Enabled = false;
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
-            if ((ArbolBinario.Raiz != null) && (cmb1.SelectedIndex != -1))
+            Arbol.Equilibrar();
+            Arbol.Recorrer(trvVer);
+            Arbol.RecorrerAsc(dgv1);
+            Arbol.RecorrerAsc(cmb1);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Arbol.Raiz != null)
             {
-                ArbolBinario.Eliminar(Convert.ToInt32(cmb1.SelectedItem));
-                SeleccionRecorrido();
-               // RecorrerElementos();
-
-
-                if (ArbolBinario.Raiz == null)
+                if (cmb1.Text != "")
                 {
-                    dgv1.Rows.Clear();
-                    cmb1.Items.Clear();
-                    //lstB.Items.Clear();
-                    trvVer.Nodes.Clear();
-                    File.Delete("./ArbolBinario.csv");
+                    int cod = Convert.ToInt32(cmb1.Text);
+                    Arbol.Eliminar(cod);
+                    Arbol.Recorrer(trvVer);
+                    Arbol.RecorrerAsc(dgv1);
+                    Arbol.RecorrerAsc(cmb1);
+                    cmb1.Text = "";
                 }
-
+                else
+                {
+                    MessageBox.Show("Debe colocar un código", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("No se encuentran datos");
+                MessageBox.Show("La lista se encuentra vacía", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnEliminar.Enabled = false;
             }
-            txtCodigo.Focus();
-
-        }
-        public void SeleccionRecorrido()
-        {
-            if (optInOrden.Checked)
-            {
-                recorrer = "InOrden";
-                if (optInOrden.Checked)
-                {
-                    asc = true;
-                }
-                else if (optInOrdenDes.Checked)
-                {
-                    asc = false;
-                }
-            }
-            else if (optPostOrden.Checked)
-            {
-                recorrer = "PostOrden";
-            }
-            else if (optPreOrden.Checked)
-            {
-                recorrer = "PreOrden";
-            }
-        }
-
-        private void cmb1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

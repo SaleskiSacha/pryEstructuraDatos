@@ -102,7 +102,6 @@
             this.cmb1.Name = "cmb1";
             this.cmb1.Size = new System.Drawing.Size(96, 21);
             this.cmb1.TabIndex = 13;
-            this.cmb1.SelectedIndexChanged += new System.EventHandler(this.cmb1_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -112,6 +111,7 @@
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label6
             // 
@@ -171,6 +171,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 3;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -178,6 +179,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -185,6 +187,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // btnAgregar
             // 
@@ -235,6 +238,7 @@
             this.optPreOrden.TabStop = true;
             this.optPreOrden.Text = "Pre-Orden";
             this.optPreOrden.UseVisualStyleBackColor = true;
+            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
             // 
             // optPostOrden
             // 
@@ -257,7 +261,7 @@
             this.optInOrdenDes.TabStop = true;
             this.optInOrdenDes.Text = "In-Orden Descendente";
             this.optInOrdenDes.UseVisualStyleBackColor = true;
-            this.optInOrdenDes.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.optInOrdenDes.CheckedChanged += new System.EventHandler(this.optInOrdenDes_CheckedChanged);
             // 
             // frmArbolBinario
             // 
