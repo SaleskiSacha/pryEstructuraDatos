@@ -50,6 +50,7 @@
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optInOrdenDes = new System.Windows.Forms.RadioButton();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
@@ -63,9 +64,10 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgv1.Location = new System.Drawing.Point(244, 241);
+            this.dgv1.Location = new System.Drawing.Point(285, 315);
+            this.dgv1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(421, 199);
+            this.dgv1.Size = new System.Drawing.Size(491, 260);
             this.dgv1.TabIndex = 15;
             // 
             // Column1
@@ -88,9 +90,12 @@
             this.mrcElementoEliminado.Controls.Add(this.cmb1);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.label6);
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(464, 12);
+            this.mrcElementoEliminado.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(541, 16);
+            this.mrcElementoEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(201, 106);
+            this.mrcElementoEliminado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(234, 139);
             this.mrcElementoEliminado.TabIndex = 14;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
@@ -98,16 +103,18 @@
             // cmb1
             // 
             this.cmb1.FormattingEnabled = true;
-            this.cmb1.Location = new System.Drawing.Point(86, 27);
+            this.cmb1.Location = new System.Drawing.Point(100, 35);
+            this.cmb1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb1.Name = "cmb1";
-            this.cmb1.Size = new System.Drawing.Size(96, 21);
+            this.cmb1.Size = new System.Drawing.Size(111, 25);
             this.cmb1.TabIndex = 13;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(18, 58);
+            this.btnEliminar.Location = new System.Drawing.Point(21, 76);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(164, 32);
+            this.btnEliminar.Size = new System.Drawing.Size(191, 42);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -116,9 +123,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 32);
+            this.label6.Location = new System.Drawing.Point(18, 42);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(51, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Código";
             // 
@@ -131,9 +139,12 @@
             this.mrcNuevo.Controls.Add(this.txtNombre);
             this.mrcNuevo.Controls.Add(this.txtCodigo);
             this.mrcNuevo.Controls.Add(this.btnAgregar);
-            this.mrcNuevo.Location = new System.Drawing.Point(244, 12);
+            this.mrcNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcNuevo.Location = new System.Drawing.Point(285, 16);
+            this.mrcNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mrcNuevo.Name = "mrcNuevo";
-            this.mrcNuevo.Size = new System.Drawing.Size(203, 223);
+            this.mrcNuevo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcNuevo.Size = new System.Drawing.Size(237, 292);
             this.mrcNuevo.TabIndex = 13;
             this.mrcNuevo.TabStop = false;
             this.mrcNuevo.Text = "Nuevo Elemento";
@@ -141,59 +152,66 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 108);
+            this.label1.Location = new System.Drawing.Point(7, 141);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Trámite";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 68);
+            this.label3.Location = new System.Drawing.Point(7, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Nombre";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 32);
+            this.label4.Location = new System.Drawing.Point(7, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Código";
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(97, 106);
+            this.txtTramite.Location = new System.Drawing.Point(113, 139);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(116, 23);
             this.txtTramite.TabIndex = 3;
             this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(97, 66);
+            this.txtNombre.Location = new System.Drawing.Point(113, 86);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(116, 23);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(97, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(113, 35);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(116, 23);
             this.txtCodigo.TabIndex = 1;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(19, 171);
+            this.btnAgregar.Location = new System.Drawing.Point(22, 224);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(164, 32);
+            this.btnAgregar.Size = new System.Drawing.Size(191, 42);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -201,9 +219,11 @@
             // 
             // btnEquilibrar
             // 
-            this.btnEquilibrar.Location = new System.Drawing.Point(482, 183);
+            this.btnEquilibrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquilibrar.Location = new System.Drawing.Point(562, 239);
+            this.btnEquilibrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEquilibrar.Name = "btnEquilibrar";
-            this.btnEquilibrar.Size = new System.Drawing.Size(164, 32);
+            this.btnEquilibrar.Size = new System.Drawing.Size(191, 42);
             this.btnEquilibrar.TabIndex = 14;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
@@ -211,17 +231,20 @@
             // 
             // trvVer
             // 
-            this.trvVer.Location = new System.Drawing.Point(12, 12);
+            this.trvVer.Location = new System.Drawing.Point(14, 16);
+            this.trvVer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trvVer.Name = "trvVer";
-            this.trvVer.Size = new System.Drawing.Size(208, 223);
+            this.trvVer.Size = new System.Drawing.Size(242, 290);
             this.trvVer.TabIndex = 16;
             // 
             // optInOrden
             // 
             this.optInOrden.AutoSize = true;
-            this.optInOrden.Location = new System.Drawing.Point(62, 260);
+            this.optInOrden.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optInOrden.Location = new System.Drawing.Point(72, 340);
+            this.optInOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.optInOrden.Name = "optInOrden";
-            this.optInOrden.Size = new System.Drawing.Size(126, 17);
+            this.optInOrden.Size = new System.Drawing.Size(150, 21);
             this.optInOrden.TabIndex = 17;
             this.optInOrden.TabStop = true;
             this.optInOrden.Text = "In-Orden Ascendente";
@@ -231,9 +254,11 @@
             // optPreOrden
             // 
             this.optPreOrden.AutoSize = true;
-            this.optPreOrden.Location = new System.Drawing.Point(62, 328);
+            this.optPreOrden.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optPreOrden.Location = new System.Drawing.Point(72, 429);
+            this.optPreOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.optPreOrden.Name = "optPreOrden";
-            this.optPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.optPreOrden.Size = new System.Drawing.Size(87, 21);
             this.optPreOrden.TabIndex = 18;
             this.optPreOrden.TabStop = true;
             this.optPreOrden.Text = "Pre-Orden";
@@ -243,9 +268,11 @@
             // optPostOrden
             // 
             this.optPostOrden.AutoSize = true;
-            this.optPostOrden.Location = new System.Drawing.Point(62, 362);
+            this.optPostOrden.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optPostOrden.Location = new System.Drawing.Point(72, 473);
+            this.optPostOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.optPostOrden.Name = "optPostOrden";
-            this.optPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.optPostOrden.Size = new System.Drawing.Size(93, 21);
             this.optPostOrden.TabIndex = 19;
             this.optPostOrden.TabStop = true;
             this.optPostOrden.Text = "Post-Orden";
@@ -254,20 +281,34 @@
             // optInOrdenDes
             // 
             this.optInOrdenDes.AutoSize = true;
-            this.optInOrdenDes.Location = new System.Drawing.Point(62, 293);
+            this.optInOrdenDes.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optInOrdenDes.Location = new System.Drawing.Point(72, 383);
+            this.optInOrdenDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.optInOrdenDes.Name = "optInOrdenDes";
-            this.optInOrdenDes.Size = new System.Drawing.Size(133, 17);
+            this.optInOrdenDes.Size = new System.Drawing.Size(158, 21);
             this.optInOrdenDes.TabIndex = 20;
             this.optInOrdenDes.TabStop = true;
             this.optInOrdenDes.Text = "In-Orden Descendente";
             this.optInOrdenDes.UseVisualStyleBackColor = true;
             this.optInOrdenDes.CheckedChanged += new System.EventHandler(this.optInOrdenDes_CheckedChanged);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(14, 533);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(95, 42);
+            this.btnVolver.TabIndex = 12;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmArbolBinario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 450);
+            this.ClientSize = new System.Drawing.Size(789, 588);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.optInOrdenDes);
             this.Controls.Add(this.optPostOrden);
             this.Controls.Add(this.optPreOrden);
@@ -277,6 +318,8 @@
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevo);
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmArbolBinario";
             this.Text = "frmArbolBinario";
             this.Load += new System.EventHandler(this.frmArbolBinario_Load);
@@ -314,5 +357,6 @@
         private System.Windows.Forms.RadioButton optPreOrden;
         private System.Windows.Forms.RadioButton optPostOrden;
         private System.Windows.Forms.RadioButton optInOrdenDes;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

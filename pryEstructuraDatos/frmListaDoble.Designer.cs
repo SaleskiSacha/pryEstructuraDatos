@@ -51,6 +51,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
@@ -61,18 +62,21 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 245);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(9, 240);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 13);
+            this.label7.Size = new System.Drawing.Size(188, 17);
             this.label7.TabIndex = 19;
             this.label7.Text = "Listado en una lista y una grilla";
             // 
             // lst1
             // 
+            this.lst1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst1.FormattingEnabled = true;
-            this.lst1.Location = new System.Drawing.Point(25, 266);
+            this.lst1.ItemHeight = 17;
+            this.lst1.Location = new System.Drawing.Point(12, 260);
             this.lst1.Name = "lst1";
-            this.lst1.Size = new System.Drawing.Size(216, 173);
+            this.lst1.Size = new System.Drawing.Size(216, 157);
             this.lst1.TabIndex = 18;
             // 
             // dgv1
@@ -84,7 +88,7 @@
             this.Column3});
             this.dgv1.Location = new System.Drawing.Point(262, 240);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(421, 199);
+            this.dgv1.Size = new System.Drawing.Size(421, 215);
             this.dgv1.TabIndex = 17;
             // 
             // Column1
@@ -107,6 +111,7 @@
             this.mrcElementoEliminado.Controls.Add(this.cmb1);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.label6);
+            this.mrcElementoEliminado.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcElementoEliminado.Location = new System.Drawing.Point(482, 11);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
             this.mrcElementoEliminado.Size = new System.Drawing.Size(201, 106);
@@ -119,7 +124,7 @@
             this.cmb1.FormattingEnabled = true;
             this.cmb1.Location = new System.Drawing.Point(86, 27);
             this.cmb1.Name = "cmb1";
-            this.cmb1.Size = new System.Drawing.Size(96, 21);
+            this.cmb1.Size = new System.Drawing.Size(96, 25);
             this.cmb1.TabIndex = 13;
             // 
             // btnEliminar
@@ -137,7 +142,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(51, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Código";
             // 
@@ -150,6 +155,7 @@
             this.mrcNuevo.Controls.Add(this.txtNombre);
             this.mrcNuevo.Controls.Add(this.txtCodigo);
             this.mrcNuevo.Controls.Add(this.btnAgregar);
+            this.mrcNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcNuevo.Location = new System.Drawing.Point(262, 11);
             this.mrcNuevo.Name = "mrcNuevo";
             this.mrcNuevo.Size = new System.Drawing.Size(203, 223);
@@ -162,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Trámite";
             // 
@@ -171,7 +177,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Nombre";
             // 
@@ -180,7 +186,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Código";
             // 
@@ -188,7 +194,7 @@
             // 
             this.txtTramite.Location = new System.Drawing.Point(97, 106);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(100, 23);
             this.txtTramite.TabIndex = 3;
             this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
@@ -196,7 +202,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(97, 66);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(100, 23);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -204,7 +210,7 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(97, 27);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 23);
             this.txtCodigo.TabIndex = 1;
             // 
             // btnAgregar
@@ -231,6 +237,7 @@
             // 
             this.groupBox1.Controls.Add(this.optDescendente);
             this.groupBox1.Controls.Add(this.optAscendente);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(482, 123);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(201, 111);
@@ -264,11 +271,23 @@
             this.optAscendente.UseVisualStyleBackColor = true;
             this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(13, 424);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(94, 31);
+            this.btnVolver.TabIndex = 21;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 450);
+            this.ClientSize = new System.Drawing.Size(705, 458);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
@@ -315,5 +334,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton optDescendente;
         private System.Windows.Forms.RadioButton optAscendente;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -122,5 +122,12 @@ namespace pryEstructuraDatos
                 btnEliminar.Enabled = false;
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal newobj = new frmPrincipal();
+            newobj.ShowDialog();
+            this.Hide();
+        }
     }
 }
