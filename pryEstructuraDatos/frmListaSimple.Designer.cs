@@ -253,6 +253,7 @@
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevo);
             this.Name = "frmListaSimple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Simple";
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);

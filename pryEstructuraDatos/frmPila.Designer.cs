@@ -294,6 +294,7 @@
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevo);
             this.Name = "frmPila";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPila";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);

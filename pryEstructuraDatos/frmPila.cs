@@ -49,6 +49,7 @@ namespace pryEstructuraDatos
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";
+                MessageBox.Show("La pila se encuentra vacia");
             }
         }
         private void Validaciones()

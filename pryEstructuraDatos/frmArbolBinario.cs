@@ -113,12 +113,12 @@ namespace pryEstructuraDatos
                 }
                 else
                 {
-                    MessageBox.Show("Debe colocar un código", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe colocar un código");
                 }
             }
             else
             {
-                MessageBox.Show("La lista se encuentra vacía", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La lista se encuentra vacía");
                 btnEliminar.Enabled = false;
             }
         }

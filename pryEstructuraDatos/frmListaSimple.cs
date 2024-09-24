@@ -39,15 +39,24 @@ namespace pryEstructuraDatos
         {
             if (ListaSimple.Primero != null)
             {
-
-
-                Codigo = Convert.ToInt32(cmb1.Text);
-                ListaSimple.Eliminar(Codigo);
-                ListaSimple.Recorrer(dgv1);
-                ListaSimple.Recorrer(lst1);
-                ListaSimple.Recorrer(cmb1);
-                ListaSimple.Recorrer();
-
+                if (cmb1.Text != "")
+                {
+                    int cod = Convert.ToInt32(cmb1.Text);
+                    ListaSimple.Eliminar(cod);
+                    ListaSimple.Recorrer(dgv1);
+                    ListaSimple.Recorrer(lst1);
+                    ListaSimple.Recorrer(cmb1);
+                    ListaSimple.Recorrer();
+                    cmb1.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Debe colocar un codigo");
+                }
+            }
+            else
+            {
+                MessageBox.Show("La lista esta vacia");
             }
         }
         private void Validaciones()
