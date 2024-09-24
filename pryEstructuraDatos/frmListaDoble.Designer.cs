@@ -1,6 +1,6 @@
 ﻿namespace pryEstructuraDatos
 {
-    partial class frmPila
+    partial class frmListaDoble
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPila));
-            this.dgvPila = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
+            this.label7 = new System.Windows.Forms.Label();
+            this.lst1 = new System.Windows.Forms.ListBox();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.cmb1 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.mrcNuevo = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,26 +47,45 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lstPila = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.optDescendente = new System.Windows.Forms.RadioButton();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvPila
+            // label7
             // 
-            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 245);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Listado en una lista y una grilla";
+            // 
+            // lst1
+            // 
+            this.lst1.FormattingEnabled = true;
+            this.lst1.Location = new System.Drawing.Point(25, 266);
+            this.lst1.Name = "lst1";
+            this.lst1.Size = new System.Drawing.Size(216, 173);
+            this.lst1.TabIndex = 18;
+            // 
+            // dgv1
+            // 
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvPila.Location = new System.Drawing.Point(275, 241);
-            this.dgvPila.Name = "dgvPila";
-            this.dgvPila.Size = new System.Drawing.Size(421, 199);
-            this.dgvPila.TabIndex = 9;
+            this.dgv1.Location = new System.Drawing.Point(262, 240);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(421, 199);
+            this.dgv1.TabIndex = 17;
             // 
             // Column1
             // 
@@ -87,23 +104,27 @@
             // 
             // mrcElementoEliminado
             // 
+            this.mrcElementoEliminado.Controls.Add(this.cmb1);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
-            this.mrcElementoEliminado.Controls.Add(this.lblTramite);
-            this.mrcElementoEliminado.Controls.Add(this.lblCodigo);
-            this.mrcElementoEliminado.Controls.Add(this.lblNombre);
-            this.mrcElementoEliminado.Controls.Add(this.label2);
-            this.mrcElementoEliminado.Controls.Add(this.label5);
             this.mrcElementoEliminado.Controls.Add(this.label6);
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(495, 12);
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(482, 11);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(201, 223);
-            this.mrcElementoEliminado.TabIndex = 8;
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(201, 106);
+            this.mrcElementoEliminado.TabIndex = 16;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
             // 
+            // cmb1
+            // 
+            this.cmb1.FormattingEnabled = true;
+            this.cmb1.Location = new System.Drawing.Point(86, 27);
+            this.cmb1.Name = "cmb1";
+            this.cmb1.Size = new System.Drawing.Size(96, 21);
+            this.cmb1.TabIndex = 13;
+            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(18, 171);
+            this.btnEliminar.Location = new System.Drawing.Point(18, 58);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(164, 32);
             this.btnEliminar.TabIndex = 12;
@@ -111,52 +132,10 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblTramite
-            // 
-            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTramite.Location = new System.Drawing.Point(103, 103);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(92, 17);
-            this.lblTramite.TabIndex = 11;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCodigo.Location = new System.Drawing.Point(103, 26);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(92, 19);
-            this.lblCodigo.TabIndex = 10;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNombre.Location = new System.Drawing.Point(103, 63);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(92, 19);
-            this.lblNombre.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Trámite";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Nombre";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 27);
+            this.label6.Location = new System.Drawing.Point(15, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 6;
@@ -171,10 +150,10 @@
             this.mrcNuevo.Controls.Add(this.txtNombre);
             this.mrcNuevo.Controls.Add(this.txtCodigo);
             this.mrcNuevo.Controls.Add(this.btnAgregar);
-            this.mrcNuevo.Location = new System.Drawing.Point(275, 12);
+            this.mrcNuevo.Location = new System.Drawing.Point(262, 11);
             this.mrcNuevo.Name = "mrcNuevo";
             this.mrcNuevo.Size = new System.Drawing.Size(203, 223);
-            this.mrcNuevo.TabIndex = 7;
+            this.mrcNuevo.TabIndex = 15;
             this.mrcNuevo.TabStop = false;
             this.mrcNuevo.Text = "Nuevo Elemento";
             // 
@@ -207,7 +186,7 @@
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(83, 105);
+            this.txtTramite.Location = new System.Drawing.Point(97, 106);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 3;
@@ -215,7 +194,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(83, 65);
+            this.txtNombre.Location = new System.Drawing.Point(97, 66);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
@@ -223,7 +202,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(83, 26);
+            this.txtCodigo.Location = new System.Drawing.Point(97, 27);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
@@ -238,51 +217,75 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 246);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Listado en una lista y una grilla";
-            // 
-            // lstPila
-            // 
-            this.lstPila.FormattingEnabled = true;
-            this.lstPila.Location = new System.Drawing.Point(12, 267);
-            this.lstPila.Name = "lstPila";
-            this.lstPila.Size = new System.Drawing.Size(216, 173);
-            this.lstPila.TabIndex = 11;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 231);
-            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.Size = new System.Drawing.Size(229, 222);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // frmPila
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.optDescendente);
+            this.groupBox1.Controls.Add(this.optAscendente);
+            this.groupBox1.Location = new System.Drawing.Point(482, 123);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(201, 111);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Listar Datos";
+            // 
+            // optDescendente
+            // 
+            this.optDescendente.AutoSize = true;
+            this.optDescendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optDescendente.Location = new System.Drawing.Point(9, 56);
+            this.optDescendente.Name = "optDescendente";
+            this.optDescendente.Size = new System.Drawing.Size(110, 21);
+            this.optDescendente.TabIndex = 1;
+            this.optDescendente.TabStop = true;
+            this.optDescendente.Text = "Descendente";
+            this.optDescendente.UseVisualStyleBackColor = true;
+            this.optDescendente.CheckedChanged += new System.EventHandler(this.optDescendente_CheckedChanged);
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optAscendente.Location = new System.Drawing.Point(9, 19);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(101, 21);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
+            // 
+            // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
+            this.ClientSize = new System.Drawing.Size(705, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lstPila);
-            this.Controls.Add(this.dgvPila);
+            this.Controls.Add(this.lst1);
+            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevo);
-            this.Name = "frmPila";
-            this.Text = "frmPila";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
+            this.Name = "frmListaDoble";
+            this.Text = "frmListaDoble";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevo.ResumeLayout(false);
             this.mrcNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,17 +293,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox lst1;
+        private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox mrcElementoEliminado;
+        private System.Windows.Forms.ComboBox cmb1;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblTramite;
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox mrcNuevo;
         private System.Windows.Forms.Label label1;
@@ -310,8 +311,9 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox lstPila;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton optDescendente;
+        private System.Windows.Forms.RadioButton optAscendente;
     }
 }

@@ -39,9 +39,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +49,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lsbMostrar = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.mrcNuevo.SuspendLayout();
             this.mrcElementoEliminado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -125,6 +125,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 3;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -132,13 +133,14 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // mrcElementoEliminado
             // 
-            this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.lblTramite);
-            this.mrcElementoEliminado.Controls.Add(this.lblCodigo);
             this.mrcElementoEliminado.Controls.Add(this.lblNombre);
+            this.mrcElementoEliminado.Controls.Add(this.lblCodigo);
+            this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.label2);
             this.mrcElementoEliminado.Controls.Add(this.label5);
             this.mrcElementoEliminado.Controls.Add(this.label6);
@@ -159,30 +161,6 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // lblTramite
-            // 
-            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTramite.Location = new System.Drawing.Point(103, 103);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(92, 17);
-            this.lblTramite.TabIndex = 11;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCodigo.Location = new System.Drawing.Point(103, 26);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(92, 19);
-            this.lblCodigo.TabIndex = 10;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNombre.Location = new System.Drawing.Point(103, 63);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(92, 19);
-            this.lblNombre.TabIndex = 9;
             // 
             // label2
             // 
@@ -266,6 +244,33 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Listado en una lista y una grilla";
             // 
+            // lblTramite
+            // 
+            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTramite.Location = new System.Drawing.Point(103, 97);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(92, 19);
+            this.lblTramite.TabIndex = 15;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(103, 60);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(92, 19);
+            this.lblNombre.TabIndex = 14;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(103, 24);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(92, 19);
+            this.lblCodigo.TabIndex = 13;
+            // 
             // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,9 +310,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblTramite;
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -317,5 +319,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lsbMostrar;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTramite;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCodigo;
     }
 }

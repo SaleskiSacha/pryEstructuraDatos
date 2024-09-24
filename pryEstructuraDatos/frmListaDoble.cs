@@ -10,26 +10,24 @@ using System.Windows.Forms;
 
 namespace pryEstructuraDatos
 {
-    public partial class frmListaSimple : Form
+    public partial class frmListaDoble : Form
     {
-        public frmListaSimple()
+        public frmListaDoble()
         {
             InitializeComponent();
         }
-        clsNodo clsNodo = new clsNodo();
-       clsListaSimple ListaSimple = new clsListaSimple();
+        clsListaDoble Listadoble = new clsListaDoble();
         Int32 Codigo;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo nuevo = new clsNodo();
-            nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            nuevo.Nombre = txtNombre.Text;
-            nuevo.Tramite = txtTramite.Text;
-            ListaSimple.Agregar(nuevo);
-            ListaSimple.Recorrer(dgv1);
-            ListaSimple.Recorrer(cmb1);
-            ListaSimple.Recorrer(lst1);
-            ListaSimple.Recorrer();
+            clsNodo objNodo = new clsNodo();
+            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            objNodo.Nombre = txtNombre.Text;
+            objNodo.Tramite = txtTramite.Text;
+            Listadoble.Agregar(objNodo);
+            Listadoble.Recorrer(dgv1);
+            Listadoble.Recorrer(lst1);
+            Listadoble.Recorrer(cmb1);
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
@@ -37,18 +35,29 @@ namespace pryEstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (ListaSimple.Primero != null)
+            if (Listadoble.Primero != null)
             {
 
-
                 Codigo = Convert.ToInt32(cmb1.Text);
-                ListaSimple.Eliminar(Codigo);
-                ListaSimple.Recorrer(dgv1);
-                ListaSimple.Recorrer(lst1);
-                ListaSimple.Recorrer(cmb1);
-                ListaSimple.Recorrer();
-
+                Listadoble.Eliminar(Codigo);
+                Listadoble.Recorrer(dgv1);
+                Listadoble.Recorrer(cmb1);
+                Listadoble.Recorrer(lst1);
             }
+        }
+
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Listadoble.Recorrer(dgv1);
+            Listadoble.Recorrer(cmb1);
+            Listadoble.Recorrer(lst1);
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Listadoble.RecorrerDes(dgv1);
+            Listadoble.RecorrerDes(cmb1);
+            Listadoble.RecorrerDes(lst1);
         }
         private void Validaciones()
         {

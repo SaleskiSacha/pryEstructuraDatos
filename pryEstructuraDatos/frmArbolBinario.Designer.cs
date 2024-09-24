@@ -33,7 +33,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb1 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.mrcNuevo = new System.Windows.Forms.GroupBox();
@@ -49,7 +49,7 @@
             this.optInOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optPostOrden = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.optInOrdenDes = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             // mrcElementoEliminado
             // 
-            this.mrcElementoEliminado.Controls.Add(this.comboBox1);
+            this.mrcElementoEliminado.Controls.Add(this.cmb1);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.label6);
             this.mrcElementoEliminado.Location = new System.Drawing.Point(464, 12);
@@ -95,13 +95,14 @@
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
             // 
-            // comboBox1
+            // cmb1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(96, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cmb1.FormattingEnabled = true;
+            this.cmb1.Location = new System.Drawing.Point(86, 27);
+            this.cmb1.Name = "cmb1";
+            this.cmb1.Size = new System.Drawing.Size(96, 21);
+            this.cmb1.TabIndex = 13;
+            this.cmb1.SelectedIndexChanged += new System.EventHandler(this.cmb1_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -246,24 +247,24 @@
             this.optPostOrden.Text = "Post-Orden";
             this.optPostOrden.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // optInOrdenDes
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(62, 293);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(133, 17);
-            this.radioButton1.TabIndex = 20;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "In-Orden Descendente";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.optInOrdenDes.AutoSize = true;
+            this.optInOrdenDes.Location = new System.Drawing.Point(62, 293);
+            this.optInOrdenDes.Name = "optInOrdenDes";
+            this.optInOrdenDes.Size = new System.Drawing.Size(133, 17);
+            this.optInOrdenDes.TabIndex = 20;
+            this.optInOrdenDes.TabStop = true;
+            this.optInOrdenDes.Text = "In-Orden Descendente";
+            this.optInOrdenDes.UseVisualStyleBackColor = true;
+            this.optInOrdenDes.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 450);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.optInOrdenDes);
             this.Controls.Add(this.optPostOrden);
             this.Controls.Add(this.optPreOrden);
             this.Controls.Add(this.optInOrden);
@@ -292,7 +293,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox mrcElementoEliminado;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox mrcNuevo;
@@ -308,6 +309,6 @@
         private System.Windows.Forms.RadioButton optInOrden;
         private System.Windows.Forms.RadioButton optPreOrden;
         private System.Windows.Forms.RadioButton optPostOrden;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton optInOrdenDes;
     }
 }

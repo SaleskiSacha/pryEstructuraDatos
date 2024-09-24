@@ -36,6 +36,10 @@ namespace pryEstructuraDatos
                     {
                         Ant = Aux;
                         Aux = Aux.Siguiente;
+                        if (Aux == null)
+                        {
+                            break;
+                        }
                     }
                     Ant.Siguiente = Nuevo;
                     Nuevo.Siguiente = Aux;
@@ -77,7 +81,7 @@ namespace pryEstructuraDatos
             listBox.Items.Clear();
             while (AUX != null)
             {
-                listBox.Items.Add(AUX.Codigo);
+                listBox.Items.Add(AUX.Codigo + " " + AUX.Nombre + " " + AUX.Tramite);
                 AUX = AUX.Siguiente;
             }
         }

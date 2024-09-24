@@ -37,10 +37,11 @@ namespace pryEstructuraDatos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            clsNodo.Nombre = txtNombre.Text;
-            clsNodo.Tramite = txtTramite.Text;
-            FilaPersonas.Agregar(clsNodo);
+            clsNodo objNodo = new clsNodo();
+            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            objNodo.Nombre = txtNombre.Text;
+            objNodo.Tramite = txtTramite.Text;
+            FilaPersonas.Agregar(objNodo);
             FilaPersonas.Recorrer(dgv1);
             FilaPersonas.Recorrer(lsbMostrar);
             FilaPersonas.Recorrer();
@@ -60,8 +61,8 @@ namespace pryEstructuraDatos
             if (FilaPersonas.Primero != null)
             {
                 lblCodigo.Text = FilaPersonas.Primero.Codigo.ToString();
-                lblCodigo.Text = FilaPersonas.Primero.Nombre;
-                lblCodigo.Text = FilaPersonas.Primero.Tramite;
+                lblNombre.Text = FilaPersonas.Primero.Nombre;
+                lblTramite.Text = FilaPersonas.Primero.Tramite;
                 FilaPersonas.Eliminar();
                 FilaPersonas.Recorrer(dgv1);
                 FilaPersonas.Recorrer(lsbMostrar);
@@ -73,6 +74,27 @@ namespace pryEstructuraDatos
                 lblNombre.Text = "";
                 lblTramite.Text = "";
             }
+        }
+        private void Validaciones()
+        {
+            if (txtCodigo.Text != string.Empty && txtNombre.Text != string.Empty && txtTramite.Text != string.Empty)
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Validaciones();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            Validaciones();
         }
     }
 }

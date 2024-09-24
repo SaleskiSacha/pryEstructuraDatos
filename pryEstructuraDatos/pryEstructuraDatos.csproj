@@ -65,6 +65,12 @@
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDoble.Designer.cs">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaSimple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaDoble.resx">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaSimple.resx">
       <DependentUpon>frmListaSimple.cs</DependentUpon>

@@ -33,7 +33,7 @@ namespace pryEstructuraDatos
                 }
                 else
                 {
-                    if (Nuevo.Codigo > Ultimo.Codigo) 
+                    if (Nuevo.Codigo > Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
                         Nuevo.Anterior = Ultimo;
@@ -41,27 +41,30 @@ namespace pryEstructuraDatos
                     }
                     else
                     {
-                        clsNodo Aux = Primero;
-                        clsNodo Ant = Primero;
-                        while (Aux.Codigo < Nuevo.Codigo)
+                        clsNodo Auxiliar = Primero;//Puntero Guia
+                        clsNodo Anterior = Primero;//Toma el valor anterior del puntero AUX
+
+                        while (Auxiliar.Codigo < Nuevo.Codigo)
                         {
-                            Ant = Aux;
-                            Aux = Aux.Siguiente;
+                            Anterior = Auxiliar;
+                            Auxiliar = Auxiliar.Siguiente;
                         }
-                        Ant.Siguiente = Nuevo;
-                        Nuevo.Siguiente = Aux;
-                        Aux.Anterior = Nuevo;
-                        Nuevo.Anterior = Ant;
+                        Anterior.Siguiente = Nuevo;
+                        Nuevo.Siguiente = Auxiliar;
+                        Auxiliar.Anterior = Nuevo;
+                        Nuevo.Anterior = Anterior;
                     }
                 }
             }
         }
         public void Eliminar(Int32 Codigo) 
         {
+
             if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
                 Primero = null;
                 Ultimo = null;
+
             }
             else
             {
@@ -72,6 +75,7 @@ namespace pryEstructuraDatos
                 }
                 else
                 {
+
                     if (Ultimo.Codigo == Codigo)
                     {
                         Ultimo = Ultimo.Anterior;
@@ -79,39 +83,85 @@ namespace pryEstructuraDatos
                     }
                     else
                     {
+
                         clsNodo Aux = Primero;
                         clsNodo Ant = Primero;
-                        while (Aux.Codigo < Codigo)
+                        while (Aux.Codigo != Codigo)
                         {
                             Ant = Aux;
-                            Ant = Aux.Siguiente;
+                            Aux = Aux.Siguiente;
                         }
                         Aux = Aux.Siguiente;
                         Ant.Siguiente = Aux;
                         Aux.Anterior = Ant;
+
                     }
                 }
+
+
             }
         }
-        public void RecorrerAscendente(DataGridView grilla) 
+        public void Recorrer(DataGridView grilla)
         {
-            clsNodo Aux = Primero;
+            clsNodo AUX = Primero;
             grilla.Rows.Clear();
-            while (Aux != null)
+            while (AUX != null)
             {
-                grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
-                Aux = Aux.Siguiente;
+                grilla.Rows.Add(AUX.Codigo, AUX.Nombre, AUX.Tramite);
+                AUX = AUX.Siguiente;
             }
         }
-        public void RecorrerDescendente(DataGridView grilla)
+        public void Recorrer(ListBox listBox)
         {
-            clsNodo Aux = Ultimo;
-            grilla.Rows.Clear();
-            while (Aux != null)
+            clsNodo AUX = Primero;
+            listBox.Items.Clear();
+            while (AUX != null)
             {
-                grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
-                Aux = Aux.Anterior;
+                listBox.Items.Add(AUX.Codigo + "  " + AUX.Nombre + "  " + AUX.Tramite);
+                AUX = AUX.Siguiente;
             }
+        }
+        public void Recorrer(ComboBox cmb)
+        {
+            clsNodo AUX = Primero;
+            cmb.Items.Clear();
+            while (AUX != null)
+            {
+                cmb.Items.Add(AUX.Nombre);
+                AUX = AUX.Siguiente;
+            }
+        }
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo aux = ult;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.Anterior;
+            }
+
         }
     }
 }

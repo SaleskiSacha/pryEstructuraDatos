@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,9 @@
             this.arbolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -55,7 +58,7 @@
             this.baseDeDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,34 +105,35 @@
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.colaToolStripMenuItem.Text = "Cola...";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.pilaToolStripMenuItem.Text = "Pila...";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // lineaSimpleToolStripMenuItem
             // 
             this.lineaSimpleToolStripMenuItem.Name = "lineaSimpleToolStripMenuItem";
-            this.lineaSimpleToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
+            this.lineaSimpleToolStripMenuItem.Size = new System.Drawing.Size(143, 6);
             // 
             // lineaDobleToolStripMenuItem
             // 
             this.lineaDobleToolStripMenuItem.Name = "lineaDobleToolStripMenuItem";
-            this.lineaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lineaDobleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.lineaDobleToolStripMenuItem.Text = "Lista Simple...";
             this.lineaDobleToolStripMenuItem.Click += new System.EventHandler(this.lineaDobleToolStripMenuItem_Click);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble";
+            this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
             // estructurasNoLinealesToolStripMenuItem
             // 
@@ -143,7 +147,7 @@
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.arbolToolStripMenuItem.Text = "Arbol";
             this.arbolToolStripMenuItem.Click += new System.EventHandler(this.arbolToolStripMenuItem_Click);
             // 
@@ -159,11 +163,23 @@
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.baseDeDatosToolStripMenuItem.Text = "Base de Datos";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(584, 426);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(584, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
@@ -172,6 +188,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

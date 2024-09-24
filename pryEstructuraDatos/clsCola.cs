@@ -58,7 +58,7 @@ namespace pryEstructuraDatos
             listBox.Items.Clear();
             while (AUX != null)
             {
-                listBox.Items.Add(AUX.Codigo);
+                listBox.Items.Add(AUX.Codigo + " " + AUX.Nombre + " " + AUX.Tramite);
                 AUX = AUX.Siguiente;
             }
         }

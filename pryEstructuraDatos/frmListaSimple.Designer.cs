@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaSimple));
             this.dgv1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.cmb1 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.mrcNuevo = new System.Windows.Forms.GroupBox();
@@ -45,10 +47,11 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lst1 = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pcbImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv1
@@ -80,7 +83,7 @@
             // 
             // mrcElementoEliminado
             // 
-            this.mrcElementoEliminado.Controls.Add(this.comboBox1);
+            this.mrcElementoEliminado.Controls.Add(this.cmb1);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.label6);
             this.mrcElementoEliminado.Location = new System.Drawing.Point(483, 21);
@@ -89,6 +92,14 @@
             this.mrcElementoEliminado.TabIndex = 11;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
+            // 
+            // cmb1
+            // 
+            this.cmb1.FormattingEnabled = true;
+            this.cmb1.Location = new System.Drawing.Point(86, 27);
+            this.cmb1.Name = "cmb1";
+            this.cmb1.Size = new System.Drawing.Size(96, 21);
+            this.cmb1.TabIndex = 13;
             // 
             // btnEliminar
             // 
@@ -158,6 +169,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 3;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -165,6 +177,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -200,31 +213,35 @@
             this.lst1.Size = new System.Drawing.Size(216, 173);
             this.lst1.TabIndex = 13;
             // 
-            // comboBox1
+            // pcbImagen
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(96, 21);
-            this.comboBox1.TabIndex = 13;
+            this.pcbImagen.Image = ((System.Drawing.Image)(resources.GetObject("pcbImagen.Image")));
+            this.pcbImagen.Location = new System.Drawing.Point(27, 16);
+            this.pcbImagen.Name = "pcbImagen";
+            this.pcbImagen.Size = new System.Drawing.Size(215, 228);
+            this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbImagen.TabIndex = 15;
+            this.pcbImagen.TabStop = false;
             // 
             // frmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 470);
+            this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lst1);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevo);
             this.Name = "frmListaSimple";
-            this.Text = "Lista Doble";
+            this.Text = "Lista Simple";
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevo.ResumeLayout(false);
             this.mrcNuevo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,6 +266,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox lst1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb1;
+        private System.Windows.Forms.PictureBox pcbImagen;
     }
 }
